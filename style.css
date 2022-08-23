@@ -1,0 +1,676 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/*termina de resetar CSS*/
+
+/*edicao css da pagina*/
+
+body {
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+.all-content {
+  width: 100%;
+}
+
+p {
+  font-size: 14px;
+  color: #262626;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav a {
+  color: #05a79e;
+  font-size: 16px;
+  padding: 0px 20px 30px 0px;
+  text-decoration: none;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+/*all nav*/
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #262626;
+  width: 100%;
+  height: 112px;
+  box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  padding: 0px 30px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.nav img {
+  padding: 15px 20px;
+  height: 80px;
+}
+
+.nav h1 {
+  font-size: 30px;
+  letter-spacing: 3px;
+  color: white;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 142px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ass-digital {
+  /*espaco entre a assinatura e corpo de texto do email*/
+  margin-top: 20px;
+  width: 300px; /*largura da assinatura digital*/
+  height: auto;
+}
+
+.ass-digital td .line {
+  border-left: 1px solid #8b8185;
+  background-color: yellow;
+  height: 80%;
+  margin: 5px 5px 5px 0px;
+  top: 10px;
+  opacity: 30%;
+}
+
+.ass-digital img {
+  height: 90px;
+  margin-right: 10px;
+  width: auto;
+}
+
+.section1 {
+  padding: 50px 15px 50px 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+/*div que contem assinatura digital*/
+.section1 .ass {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  margin-right: 100px;
+  padding: 20px 20px 20px 20px;
+  position: relative;
+}
+.ass ion-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #05a79e;
+}
+.display-flex {
+  display: flex;
+}
+.align-form {
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.section1 .txt-ass {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0px;
+  box-sizing: border-box;
+}
+
+.section1 h2:first-child {
+  font-size: 50px;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.txt-ass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.section1 .txt-ass p {
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.txt-ass input {
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+  color: #05a79e;
+  font-weight: 600;
+  margin-bottom: 10px;
+  height: 30px;
+  font-size: 16px;
+  padding: 0px 10px;
+  box-sizing: border-box;
+}
+
+textarea:focus,
+input:focus {
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+  border: 0px;
+  outline: 0;
+}
+
+.cria-assinatura {
+  margin: 30px 0px;
+}
+
+.txt-ass input::placeholder {
+  color: #05a79e;
+  font-weight: 300;
+}
+
+/*button criar assinatura*/
+.txt-ass .assinatura {
+  border-radius: 50px;
+  background-color: #05a79e;
+  color: white;
+  font-size: 22px;
+  border: 0px;
+  padding: 5px 30px;
+  margin-top: 20px;
+}
+
+div .line-horizontal {
+  width: 90%;
+  border-bottom: 1px solid #dbdbdb;
+  margin-top: 50px;
+  margin: 5px auto;
+}
+
+body p {
+  font-size: 12px;
+  line-height: 15px;
+  /*font-family: "Helvetica Neue", Helvetica;*/
+  font-family: "Roboto", sans-serif;
+}
+
+ion-icon {
+  color: #93536c;
+  opacity: 70%;
+  margin: 0px 2px 0px 2px;
+  font-size: 20px;
+}
+
+.icons img {
+  height: 20px;
+  margin: 0px 2px 0px 2px;
+}
+
+.icons {
+  margin-top: 0px;
+  padding-left: 3px;
+}
+
+tr,
+td {
+  vertical-align: middle;
+}
+
+.description {
+  margin-top: 0px;
+  width: 500px;
+  padding-left: 5px;
+}
+
+.description p::first-letter {
+  text-transform: capitalize;
+}
+
+.linetd div {
+  margin: auto auto;
+  height: 80%;
+  /*border-left: 1.5px solid rgb(147, 83, 108,0.4);*/
+  border-left: 2px solid rgb(32, 33, 36, 0.5);
+  height: 83px;
+}
+
+table,
+td,
+tr {
+  /*border: 1px solid black;*/
+}
+table {
+}
+h1 {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 30px 15px;
+  opacity: 90%;
+}
+
+.caixa-titulo-tutorial-txt {
+  margin: 100px 0px 50px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.6;
+}
+
+.titulo-tutorial-txt {
+  width: 100%;
+  font-size: 30px;
+  font-weight: 600;
+  margin: 20px auto;
+  opacity: 90%;
+}
+
+li {
+  margin: 0px 0px 15px 20px;
+  list-style-type: upper-roman;
+}
+
+.tutorial {
+  width: 100%;
+  margin: 30px 0px 0px 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.tutorial iframe {
+  border-radius: 14px;
+  width: 980px;
+  height: 551px;
+  box-sizing: border-box;
+}
+
+.gmail-button img {
+  margin: auto auto;
+  height: 3em;
+}
+
+.gmail-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5em;
+  height: 5em;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+/*editando segunda secao com video tutorial*/
+
+.video-container {
+  width: 100%;
+  background-color: #262626;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0px;
+}
+
+.video-container h2 {
+  width: 500px;
+  color: white;
+  opacity: 0.8;
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.second-color {
+  color: #05a79e;
+}
+
+/*container text tutorial*/
+.container-tutorial-txt {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  display: none;
+}
+
+.container-tutorial-txt div img {
+  margin: 20px 0px;
+  width: 600px;
+  height: auto;
+}
+
+.img-grande {
+  width: 70%;
+}
+
+/*observatorio logo*/
+.ass-digital .logo-observatorio {
+  height: 105px;
+  margin-right: 0px;
+  width: auto;
+  background-color: rgb(0, 0, 0, 0.95);
+  border-radius: 9px;
+}
+
+.display-none {
+  display: none;
+}
+
+/*selecionado logica do professor*/
+.logo-observatorio.display-none {
+  display: none;
+}
+
+.logo-cdcc.display-none {
+  display: none;
+}
+
+/*option observatorio ass ou cdcc ass*/
+.options {
+  width: 345px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.options button {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  /*border-bottom: 3px solid white;*/
+  background-color: white;
+  z-index: 99;
+  padding: 5px 5px;
+  /*border-bottom: 2px solid #05a79e;*/
+  color: #262626;
+  font-size: 14px;
+  font-weight: 600;
+  width: 150px;
+  box-sizing: border-box;
+}
+.options button:hover {
+}
+
+/*
+.options .option-cdcc {
+  border-bottom: 2px solid #05a79e;
+  color: white;
+  background-color: #262626;
+}*/
+.option .option-cdcc.display-none {
+  background-color: white;
+  color: #262626;
+  border-bottom: 0px;
+}
+/*opcao cdcc*/
+
+/*quando o botao é clicado*/
+
+.options button.clicked {
+  transition: width 0.3s linear;
+  border: 0px;
+  border-bottom: 2px solid #05a79e;
+  color: white;
+  background-color: #262626;
+
+  width: 300px;
+}
+
+/*
+.efeito-button {
+  border-bottom: 2px solid #05a79e;
+  color: white;
+  background-color: #262626;
+}*/
+
+.container-tutorial-txt p {
+  text-align: center;
+  width: 300px;
+}
+
+.container-tutorial-txt div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.2);*/
+  padding: 30px 30px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+.container-tutorial-txt div h2 {
+  text-align: center;
+  width: 100%;
+  color: #262626;
+  font-size: 30px;
+  font-weight: 500;
+}
+.container-tutorial-txt p {
+  width: 100%;
+  color: #262626;
+  font-size: 14px;
+}
+
+/*mobile*/
+
+/*********************************************************/
+/*mobile*/
+
+@media (max-width: 600px) {
+  body {
+    overflow: scroll;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  .options-menu {
+    display: none;
+  }
+
+  .nav {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 0px;
+    box-sizing: border-box;
+  }
+
+  .nav img {
+    display: none;
+  }
+
+  .nav h1 {
+    font-size: 30px;
+  }
+
+  .container,
+  .section1,
+  .video-container {
+    width: 100%;
+  }
+
+  .section1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0px;
+  }
+
+  .section1 div:first-child > div {
+    margin: 0px auto;
+  }
+
+  .txt-ass p,
+  .txt-ass h2,
+  .titulo-tutorial-txt,
+  .section1 h2 {
+    text-align: center;
+  }
+  .cria-assinatura {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .video-container h2 {
+    width: 100%;
+  }
+
+  .tutorial iframe {
+    width: 100%;
+    height: auto;
+  }
+
+  .section1 .txt-ass h2 {
+    font-size: 30px;
+  }
+
+  .tutorial {
+    margin: 30px 0px 0px 0px;
+  }
+
+  .txt-ass {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+  }
+}

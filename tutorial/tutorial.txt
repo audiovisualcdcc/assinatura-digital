@@ -1,0 +1,17 @@
+0. Abra seu gmail
+1. Clique no ícone de configuração do gmail, localizado no canto superior direito
+img geral 
+img icone
+2. Uma seção se abrirá abaixo do botão, clique em "configurações rápidas"
+img aba
+3. Desça página até a área de assinatura como indicado na figura abaixo
+fig assinatura
+4. Clique no botão "+ Criar nova", coloque o nome desejado(exemplo: CDCC)
+5. Selecione sua assinatura no começo desse arquivo e cole na caixa da assinatura(indicada pelo retângulo azul)
+6. Na parte de baixo(retângulo vermelho), há uma seleção "PARA USO EM NOVOS E-MAILS", encontre a assinatura com o nome criado(no meu exemplo é assinatura com nome CDCC e a selecione.
+7. Ao lado, "PARA USO EM RESPOSTAS/ENCAMINHAMENTOS", selecione "Sem assinatura"(para que suas respostas não fiquem mandando várias assinaturas, mandará uma só no início)
+img selecionando 1
+img selecionando 2
+8. Desça até o final da página e clique no botão "Salvar alterações"
+img 
+9. Agora mande um email para você mesmo e veja se a assinatura está correta

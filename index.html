@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <!--links para css dentro da head-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--reset tira o css automático do navegador-->
+    <link rel="stylesheet" href="reset.css" />
+
+    <!--link para css da página-->
+    <link rel="stylesheet" href="style.css" />
+    <title>Assinatura Digital CDCC</title>
+
+    <!--link da fonte roboto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--barra de navegação que fica fixa na parte de cima da pagina-->
+    <nav>
+      <div class="nav">
+        <img src="./img/Logo-CDCC-negativo-vertical.png" />
+        <h1>Audio<span class="second-color">visual</span></h1>
+      </div>
+      <div class="options-menu">
+        <a href="#">ASSINATURA</a>
+        <a href="#video">TUTORIAL VIDEO</a>
+      </div>
+    </nav>
+
+    <div class="all-content">
+      <!--todo site está dentro da classe do css all-content-->
+      <div class="container">
+        <!--seção um com assinatura e texto ao lado direito-->
+        <div class="section1">
+          <h2>SUA <span class="second-color"> ASSINATURA</span> DIGITAL</h2>
+
+          <div class="cria-assinatura display-flex align-form">
+            <div>
+              <!--botao que seleciona assinatura do cdcc ou observatorio-->
+              <div class="options display-flex">
+                <button
+                  class="option-cdcc clicked"
+                  onclick="opcao_assinatura(this);"
+                >
+                  CDCC
+                </button>
+                <button
+                  class="option-observatorio"
+                  onclick="opcao_assinatura(this);"
+                >
+                  OBSERVATÓRIO
+                </button>
+              </div>
+
+              <div class="ass">
+                <!--icone copy da assinatura-->
+                <ion-icon name="copy" class="click-me"></ion-icon>
+
+                <p></p>
+                <!--assinatur digital criada no formato tabela-->
+                <!--o gmail só entende no formato table, n entende formatacao div-->
+                <table class="ass-digital" id="copy-ass">
+                  <!--parte esquerda com logo-->
+                  <!--as logos estão na pasta "img"-->
+                  <tr>
+                    <td rowspan="2">
+                      <!--img do logo do cdcc-->
+                      <img class="logo-cdcc" src="./img/sem-texto-borda.png" />
+
+                      <!--img do logo do observatirio-->
+                      <img
+                        class="logo-observatorio display-none"
+                        src="./img/logo_observatorio.png"
+                      />
+                    </td>
+
+                    <!--versao com uma linha divisoria na assinatura-->
+                    <!--para ver a linha tire display-none da linha abaixo-->
+                    <td rowspan="2" class="linetd display-none"><div></div></td>
+
+                    <!--decrição dos textos na assinatura-->
+                    <td class="description">
+                      <p class="name">Nome Completo</p>
+                      <p class="nameSetor">Setor do CDCC</p>
+                      <p class="observatorio display-none">
+                        Observatório Dietrich Schiel
+                      </p>
+                      <p>
+                        Tel.: +55 (16) <span class="telefone">3373-0000</span>
+                      </p>
+                      <p>CDCC USP São Carlos</p>
+                    </td>
+                  </tr>
+
+                  <!--parte direita da assinatura, textos e ícones-->
+                  <tr>
+                    <td>
+                      <!--Icones da assinatura e seus respectivos ícones-->
+                      <div class="icons">
+                        <a href="https://pt-br.facebook.com/cdcc.usp/"
+                          ><img src="./img/FB2.png"
+                        /></a>
+                        <a href="https://www.instagram.com/cdcc.usp"
+                          ><img src="./img/INSTA2.png"
+                        /></a>
+                        <a href="https://cdcc.usp.br/"
+                          ><img src="./img/SITE2.png"
+                        /></a>
+                        <a href="https://www.youtube.com/user/USPCDCC"
+                          ><img src="./img/YTB2.png"
+                        /></a>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+                <p></p>
+              </div>
+            </div>
+
+            <!--seção de personalização da assinatura, com botão criar-->
+            <div class="txt-ass">
+              <!--forms criando assinatura-->
+              <input
+                type="text"
+                placeholder="Nome Completo"
+                class="nomeCompleto"
+              />
+              <input type="text" placeholder="Setor do CDCC" class="setor" />
+              <input
+                type="tel"
+                placeholder="Telefone sem DDD"
+                class="tel"
+                pattern="[0-9]{4}-[0-9]{4} "
+                required
+              />
+
+              <button class="assinatura" onclick="createAss();">CRIAR</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="line-horizontal" id="video"></div>
+
+        <!--seção com o video tutorial criado no loom-->
+        <div class="video-container">
+          <h2>
+            TUTORIAL DE COMO COLOCAR A SUA
+            <span class="second-color">ASSINATURA NO GMAIL</span>
+          </h2>
+          <!--video tutorial-->
+          <div class="tutorial">
+            <!--video do tutorial criado com a extensão do chromme loom-->
+            <iframe
+              src="https://www.loom.com/embed/d9768b5c221644a1b8d9365ff2cf0d06"
+              frameborder="0"
+              webkitallowfullscreen
+              mozallowfullscreen
+              allowfullscreen
+              style=""
+            ></iframe>
+          </div>
+        </div>
+      </div>
+      <!--fim do container-->
+    </div>
+    <!--fim do all-content -->
+    <!--fim corpo do site-->
+
+    <!--library icons - para conseguir importar o icone copy-->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!--linka com javascript da pagina-->
+    <script src="script.js"></script>
+  </body>
+</html>
