@@ -13,12 +13,38 @@ function createAss() {
 
   //Colocando a primeira letra dos nomes e sobrenomes maiuscula
   const palavras = nome.split(" ");
+  const setorpalavra = setor.split(" ");
 
   for (let i = 0; i < palavras.length; i++) {
-    palavras[i] = palavras[i][0].toUpperCase() + palavras[i].substr(1);
+    if (
+      palavras[i] !== "de" &&
+      palavras[i] !== "da" &&
+      palavras[i] !== "do" &&
+      palavras[i] !== "dos" &&
+      palavras[i] !== "das" &&
+      palavras[i] !== "em"
+    ) {
+      palavras[i] = palavras[i][0].toUpperCase() + palavras[i].substr(1);
+    }
   }
 
+  for (let i = 0; i < setorpalavra.length; i++) {
+    if (
+      setorpalavra[i] != "de" &&
+      setorpalavra[i] != "da" &&
+      setorpalavra[i] != "do" &&
+      setorpalavra[i] != "dos" &&
+      setorpalavra[i] != "das" &&
+      setorpalavra[i] != "em"
+    ) {
+      console.log(setorpalavra[i]);
+      console.log(typeof setorpalavra[i]);
+      setorpalavra[i] =
+        setorpalavra[i][0].toUpperCase() + setorpalavra[i].substr(1);
+    }
+  }
   nome = palavras.join(" ");
+  setor = setorpalavra.join(" ");
 
   //pega os elementos html em que colocarei esses valores dentro da assinatura
   document.querySelector(".description .name").innerHTML = nome;
@@ -44,11 +70,15 @@ function selectText(node) {
   }
 }
 
+function abrirGmail() {
+  let gmail = window.open("https://mail.google.com/mail/u/0/#settings/general");
+}
+
 const clickable = document.querySelector(".click-me");
 clickable.addEventListener("click", () => {
   selectText("copy-ass");
   document.execCommand("copy");
-  let gmail = window.open("https://mail.google.com/mail/u/0/#settings/general");
+  setTimeout(abrirGmail, 300);
 });
 
 function opcao_assinatura(elemento) {
