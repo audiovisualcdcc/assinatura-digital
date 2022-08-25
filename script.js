@@ -22,7 +22,8 @@ function createAss() {
       palavras[i] !== "do" &&
       palavras[i] !== "dos" &&
       palavras[i] !== "das" &&
-      palavras[i] !== "em"
+      palavras[i] !== "em" &&
+      palavras[i] !== "e"
     ) {
       palavras[i] = palavras[i][0].toUpperCase() + palavras[i].substr(1);
     }
@@ -35,7 +36,8 @@ function createAss() {
       setorpalavra[i] != "do" &&
       setorpalavra[i] != "dos" &&
       setorpalavra[i] != "das" &&
-      setorpalavra[i] != "em"
+      setorpalavra[i] != "em" &&
+      palavras[i] !== "e"
     ) {
       console.log(setorpalavra[i]);
       console.log(typeof setorpalavra[i]);
@@ -81,6 +83,7 @@ clickable.addEventListener("click", () => {
   setTimeout(abrirGmail, 300);
 });
 
+//quando clico no botao cddc ou observatorio acima da assinatura
 function opcao_assinatura(elemento) {
   //remove o que esta clicado
   let clicado = document.querySelector(".clicked");
@@ -89,7 +92,6 @@ function opcao_assinatura(elemento) {
   //Coloque efeito clicked no clicado
   elemento.classList.add("clicked");
 
-  //let nomeClasse = elemento.className;
   let seletorLogoCdcc = document.querySelector(".logo-cdcc");
   seletorLogoCdcc.classList.add("display-none");
 
@@ -99,6 +101,13 @@ function opcao_assinatura(elemento) {
   let descricaoObservatorio = document.querySelector(
     ".description .observatorio"
   );
+
+  //seletor facebook icone observatorio
+  let seletorFbObservatorio = document.querySelector(".icons .fb-observatorio");
+
+  //seletor facebook icone cdcc
+  let seletorFbCdcc = document.querySelector(".icons .fb-cdcc");
+
   console.log(seletorLogoCdcc);
   console.log(seletorLogoObservatorio);
   console.log(descricaoObservatorio);
@@ -107,23 +116,28 @@ function opcao_assinatura(elemento) {
     //desaparece logo observatorio
     if (seletorLogoObservatorio != null) {
       seletorLogoObservatorio.classList.add("display-none");
+      seletorFbObservatorio.classList.add("display-none");
     }
-    //desaparece descricao observatorio
+    //desaparece descricao observatorio - "Observatório Dietrich Schiel"
     descricaoObservatorio.classList.add("display-none");
 
     //aparece logo cdcc
     seletorLogoCdcc.classList.remove("display-none");
-
+    //aparece fb do cdcc
+    seletorFbCdcc.classList.remove("display-none");
     //coloca efeito no button cdcc
     // document.querySelector(".option-cdcc").classList.add("efeito-button");
   } else {
     if (seletorLogoCdcc != null) {
       //desaparece logo cdcc
       seletorLogoCdcc.classList.add("display-none");
+      seletorFbCdcc.classList.add("display-none");
     }
     //document.querySelector(".option-observatorio").classList.add("efeito-button");
     //aparece logo observatorio
     seletorLogoObservatorio.classList.remove("display-none");
+    seletorFbObservatorio.classList.remove("display-none");
+
     //aparece descricao observatorio
     descricaoObservatorio.classList.remove("display-none");
   }
